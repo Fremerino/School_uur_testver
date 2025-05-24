@@ -1,0 +1,45 @@
+.Timer_input {
+    width: 100% !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+}
+.Timer_button_start {
+    width: 100% !important;
+    background-color: #195E00;
+    padding: 15px;
+    color:  white;
+    font-size: larger;
+    cursor: pointer;
+    border: none;
+}
+.Timer_button_pause {
+    width: 100% !important;
+    background-color: #FF8383;
+    padding: 15px;
+    color:  white;
+    font-size: larger;
+    cursor: pointer;
+    border: none;
+}
+.Timer_button_start:hover {
+    background-color: #0e3300;
+}
+.Timer_button_pause:hover {
+    background-color: #f82d2d;
+}
+.MuiBox-root {
+    margin: auto !important;
+    margin-top: 4vh !important;
+}
+@media only screen and (max-width: 1300px) {
+    .Timer_button_start {
+
+        font-size: small!important;
+
+    }
+    .Timer_button_pause {
+
+        font-size: small !important;
+
+    }
+}

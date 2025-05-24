@@ -1,0 +1,212 @@
+.p-dropdown {
+ 
+    background-color: #F6F8FA;
+    padding: 10px;
+    border-radius: 16px;
+    width: 8vw;
+    text-align: center;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    margin-left: 1vw;
+    line-height: 0.99;
+}
+.p-dropdown-items-wrapper {
+    height: 8vh;
+    background-color: #F6F8FA;
+}
+.p-dropdown-item{
+    background-color: #FFFFFF;
+    margin-top: 5px !important;
+    border-radius: 16px;
+    width: 80%;
+    margin: auto;
+
+}
+.p-dropdown-items {
+    text-align: center;
+}
+.Recipe_item_row > div {
+    display:inline-block
+}
+input {
+    background-color: #F6F8FA;
+    border: transparent;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 16px;
+    margin-left: 1vw;
+    padding: 10px;
+    text-align: center;
+    width: 7vw;
+    box-sizing: border-box;
+}
+.Recipe_item_row {
+    margin-top: 1vh;
+}
+.Recipe_ingeridents_coat {
+    width: 30vw;
+    margin: auto;
+    height: 30.5vh;
+    text-align: center;
+    overflow: scroll;
+    background-color: #F6F8FA;
+    border-radius: 16px;
+}
+.add_button {
+    background-color: #03882B;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 16px;
+    width: 12vw;
+    text-align: center;
+    padding: 10px;
+    margin-left: -14vw;
+    margin-top: 1vh;
+    box-sizing: border-box;
+    border: transparent;
+}
+.Recipe_item_row_button {
+    text-align: none;
+}
+textarea{
+    background-color: #F6F8FA;
+    border: transparent;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 16px;
+    padding: 10px;
+   font-size: x-large;
+    width: 30vw;
+    box-sizing: border-box;
+    display: block;
+    margin:auto;
+}
+.Procces_row {
+    margin-top: 1vh;
+}
+.Recipe_name_label {
+    width: 30vw;
+    text-align: left !important;
+    font-size: x-large;
+    display: block;
+    margin:auto;
+}
+.Recipe_item_row_full {
+    margin-top: 1vh;
+}
+.submit_button {
+    background-color: #04AA6D;
+    border-radius: 16px;
+    border: 2px solid black;
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    position: absolute;
+    right: 5vw;
+    width: 12vw;
+    font-size: 1.5vw;
+    height: 4vh;
+    line-height: 0;
+
+}
+.file_button {
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+    margin-left: 0vw;
+    height: 100%;
+    opacity: 0;
+}
+.submit_button:hover {
+    background-color: #187252;
+}
+
+
+.File_overlay {
+    background-color: #F6F8FA;
+    border-radius: 16px;
+    border: 2px solid black;
+    width: 12vw;
+    height: 4vh;
+    display : inline-block;
+    position: relative;
+    margin-left: 4vw;
+    background-image: url("../assets/Uplod.png");
+    background-repeat: no-repeat;
+    background-position: center;
+     background-size: contain;
+}
+.Recipe_file_submit_row {
+    align-items: center;
+    margin-top: 1vh;
+}
+.Recipe_timeSet_row {
+    align-items: center;
+    margin-top: 1vh;
+}
+.time_input {
+    width: 12vw;
+    height: 4vh;
+    display : inline-block;
+    position: relative;
+    margin-left: 4vw;
+    border-radius: 16px;
+    border: 2px solid black;
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    font-size: 1.5vw;
+}
+.Name_input {
+    width: 12vw !important;
+}
+.Quantity_input {
+    width: 5vw !important;
+}
+
+@media only screen and (max-width: 1600px) {
+    label {
+        font-size: medium  !important;
+        
+    }
+    input {
+        padding: 6px !important;
+    }
+    .p-dropdown {
+        padding: 6px !important;
+    }
+    .add_button {
+        padding: 6px !important;
+    }
+
+
+}
+
+@media only screen and (max-width: 2000px) {
+    label {
+        font-size: medium  !important;
+        
+    }
+    .recipe_form_coat {
+        height: 75vh;
+    }
+    
+
+}
+@media only screen and (max-width: 1410px) {
+    label {
+        font-size:small !important;
+        
+    }
+    .recipe_form_coat {
+        height: 80vh;
+
+    }
+    
+
+}
+@media only screen and (max-height: 1050px) {
+
+    .recipe_form_coat {
+        height: 100%;
+
+    }
+    
+
+}
