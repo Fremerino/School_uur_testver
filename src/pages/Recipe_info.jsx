@@ -14,7 +14,7 @@ function Recipe_info(){
     const [isLoading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch("http://localhost/my-app/src/Model/Get_Recipe.php", {
+        fetch("https://uur_data.cleverapps.io/Get_Recipe.php", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

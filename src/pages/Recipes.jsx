@@ -10,7 +10,7 @@ function Recipes(){
     const [error, setError] = useState(null);
     console.log("xxxx"+Cookies.get("ID"));
     useEffect(() => {
-      fetch("http://localhost/my-app/src/Model/Main.php")
+      fetch("https://uur_data.cleverapps.io/Main.php")
         .then((response) => {
           console.log('Raw response:', response);
           // Zobrazíme surový text odpovědi pro debugging

@@ -25,7 +25,7 @@ function Register_form(props) {
             
             
             try {
-                const response = await fetch('http://localhost/my-app/src/Model/Send.php', {
+                const response = await fetch('https://uur_data.cleverapps.io/Send.php', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

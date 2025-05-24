@@ -26,7 +26,7 @@ function DataSend() {
             User_id: Cookies.get("ID")
         };
         try {
-            const response = await fetch('http://localhost/my-app/src/Model/Remove_Recipe.php', {
+            const response = await fetch('https://uur_data.cleverapps.io/Remove_Recipe.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ function DataSend() {
         formData.append("Image", Image); 
 
         try {
-            const response = await fetch("http://localhost/my-app/src/Model/Recipe_add.php", {
+            const response = await fetch("https://uur_data.cleverapps.io/Recipe_add.php", {
                 method: "POST",
                 body: formData,
             });
@@ -133,7 +133,7 @@ function base64ToFile(base64String, filename = 'image.png') {
         const [data, setData] = useState([]);
     
         useEffect(() => {
-            fetch("http://localhost/my-app/src/Model/Get_Recipe.php", {
+            fetch("https://uur_data.cleverapps.io/Get_Recipe.php", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
