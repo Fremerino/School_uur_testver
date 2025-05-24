@@ -51,7 +51,7 @@ function Recipe_page_controller(props) {
         };
     
         try {
-          const response = await fetch('http://localhost/my-app/src/Model/Remove_Recipe.php', {
+          const response = await fetch('https://uur_data.cleverapps.io/Remove_Recipe.php', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
