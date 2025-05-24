@@ -40,6 +40,7 @@
     font-size: 64px ;
     margin-top: 2vh;    
     width: 25vw;
+    min-width: 200px;
 }
 
 .login-form  > button {
@@ -107,3 +108,52 @@
     min-height: 60px;
 }
   }
+@media (max-width: 800px) {
+  .Profile {
+    background-color: #D9B99B;
+    width: 100%;
+}
+  .Profile_form_coat
+  {
+    margin: auto;
+    margin-top: 5vh;
+  }
+  .login-form > input {
+    font-size: 35px;
+}
+.register-form > input {
+    font-size: 35px;
+}
+.login-form > button {
+    font-size: 35px;
+    min-height: 60px;
+}
+.register-form > button {
+    font-size: 35px;
+    min-height: 60px;
+}
+}
+@media (max-width: 900px) {
+.login-form  {
+    display: block;
+}
+  .Profile {
+    background-color: #D9B99B;
+    width: 100%;
+}
+  .Profile_form_coat
+  {
+    margin: auto;
+    margin-top: 5vh;
+  }
+  input {
+    margin-left: 0vw !important;
+        font-size: 30px;
+        width: 100% !important;
+  }
+  button  {
+    font-size: 30px !important;
+    min-height: 60px !important;
+    width: 100% !important;
+  }
+}

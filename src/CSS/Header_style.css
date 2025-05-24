@@ -97,4 +97,12 @@ a:hover {
         .logo {
             display:none;
         }
+        #head {
+            height: 17vh;
+}
   }
+  @media only screen and (max-height: 700px) {
+        #head {
+            height: 20vh;
+}
+}
