@@ -137,6 +137,9 @@
 .login-form  {
     display: block;
 }
+.register-form  > input {
+    margin-top: 5% !important;
+}
   .Profile {
     background-color: #D9B99B;
     width: 100%;

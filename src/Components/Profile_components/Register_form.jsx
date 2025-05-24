@@ -56,7 +56,7 @@ function Register_form(props) {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="Email"
+                    placeholder="Name"
                     required
                 />
                 <br/> 
