@@ -26,7 +26,7 @@ function Recipes(){
           });
         })
         .then((data) => {
-          console.log('Parsed data:', data);
+          
           setData(data);
         })
         .catch((error) => {
