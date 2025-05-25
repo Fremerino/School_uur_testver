@@ -8,14 +8,14 @@ function Recipes(){
     const colorItems = [];
     const [data, setData] = useState(null);
     const [error, setError] = useState(null);
-    console.log("xxxx"+Cookies.get("ID"));
+  
     useEffect(() => {
       fetch("https://uur_data.cleverapps.io/Main.php")
         .then((response) => {
-          console.log('Raw response:', response);
+      
           // Zobrazíme surový text odpovědi pro debugging
           return response.text().then(text => {
-            console.log('Raw text:', text);
+       
             // Pokud je text prázdný, vyhodíme chybu
             if (!text) throw new Error('No data received');
             // Zkusíme text naparsovat jako JSON

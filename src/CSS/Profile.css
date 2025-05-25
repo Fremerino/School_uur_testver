@@ -134,29 +134,36 @@
 }
 }
 @media (max-width: 900px) {
-    .login-form  {
-        display: block;
-    }
-    .register-form {
-        margin-top: 5% !important;
-    }
-    .Profile {
-        background-color: #D9B99B;
-        width: 100%;
-    }
-    .Profile_form_coat
-    {
-        margin: auto;
-        margin-top: 5vh;
-    }
-    input {
-        margin-left: 0vw !important;
-            font-size: 30px;
-            width: 100% !important;
-    }
-    button  {
-        font-size: 30px !important;
-        min-height: 60px !important;
+.login-form  {
+    display: block;
+}
+  .Profile {
+    background-color: #D9B99B;
+    width: 100%;
+}
+  .Profile_form_coat
+  {
+    margin: auto;
+    margin-top: 5vh;
+  }
+  .login-form > input {
+    margin-left: 0vw !important;
+        font-size: 30px;
         width: 100% !important;
-    }
+  }
+  .login-form > button  {
+    font-size: 30px !important;
+    min-height: 60px !important;
+    width: 100% !important;
+  }
+   .register-form > input {
+    margin-left: 0vw !important;
+        font-size: 30px;
+        width: 100% !important;
+  }
+  .register-form > button  {
+    font-size: 30px !important;
+    min-height: 60px !important;
+    width: 100% !important;
+  }
 }

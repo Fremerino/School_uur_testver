@@ -37,7 +37,7 @@ function Register_form(props) {
                 props.Message(result[0]);
                 props.set_pop_up(true);
                 
-                console.log('Úspěch:', result);
+                
                 
             } catch (error) {
                 console.error('Chyba:', error);

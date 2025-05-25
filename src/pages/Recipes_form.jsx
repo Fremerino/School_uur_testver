@@ -72,7 +72,7 @@ function DataSend() {
     };
 
     const combinedSend = async () => {
-        console.log("ahoj :)")
+        
         if (id) {
             await removeData(); // počkej, až se recept opravdu odstraní
         }
@@ -86,7 +86,7 @@ function DataSend() {
 function base64ToFile(base64String, filename = 'image.png') {
 
   const arr = base64String.split(',');
-  let mime = 'image/png'; // Výchozí MIME typ
+  let mime = 'image/png'; 
   let bstr;
 
   if (arr.length > 1 && arr[0].startsWith('data:')) {
@@ -141,10 +141,10 @@ function base64ToFile(base64String, filename = 'image.png') {
                 body: JSON.stringify({ id }),
             })
               .then((response) => {
-                console.log('Raw response:', response);
+    
                 // Zobrazíme surový text odpovědi pro debugging
                 return response.text().then(text => {
-                  console.log('Raw text:', text);
+        
                   // Pokud je text prázdný, vyhodíme chybu
                   if (!text) throw new Error('No data received');
                   // Zkusíme text naparsovat jako JSON
@@ -157,7 +157,7 @@ function base64ToFile(base64String, filename = 'image.png') {
                 });
               })
               .then((data) => {
-                console.log('Parsed data:', data);
+       
                 setData(data);
                 setRecipeName(data[1]);
                 setProcess(data[3]);
