@@ -50,7 +50,7 @@ function Timer(props) {
 
     const handleInputChange = (e) => {
         let raw = e.target.value.replace(/\D/g, ''); // jen číslice
-        if (raw.length > 5) raw = raw.slice(0, 5); // max 5 číslic (MMMSS)
+        if (raw.length > 5) raw = raw.slice(0, 5); // max 5 číslic 
     
         let formatted = raw;
         if (raw.length > 2) {
