@@ -113,3 +113,16 @@ h1 {
     }
 
 }
+@media only screen and (max-width: 1040px) {
+.recipe_info_coat {
+    display: block;
+}
+.Process_main_div{
+margin: auto;
+margin-top: 5%;
+}
+.recipe_info_coat {
+    height: 160vh;
+}
+
+}
