@@ -32,7 +32,7 @@ function Recipe_timeSet_row(props) {
       <>
         <div className="Recipe_timeSet_row">
           <Generic_label  text="Time" style_definition={styler} class="nametag_label"/> 
-          <input name="myInput" className="time_input" onChange={(e)=>{handleInput(e)}} value={props.time} placeholder="minutes" /> 
+          <input name="myInput" className="time_input" onChange={(e)=>{handleInput(e)}} value={props.time} placeholder="minutes" maxLength={5} /> 
         </div>
 
       </>

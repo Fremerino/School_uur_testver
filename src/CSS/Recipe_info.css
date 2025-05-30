@@ -38,7 +38,7 @@ flex-direction: column;
     margin: auto;
     height: 8.5vh;
     line-height: 1.0;
-    font-size: 8vh;
+    font-size: 7vh;
     text-align: center;
     overflow: scroll;
 }
@@ -83,7 +83,7 @@ h1 {
 }
 .Recipe_info_label_name
 {
-    width: max(7vw,100px) !important;
+    width: max(9vw,150px) !important;
 }
 .Recipe_info_label_count
 {

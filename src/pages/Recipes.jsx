@@ -1,24 +1,19 @@
-import Header from "../Components/Header"
-import Recipe from "../Components/Recipe"
+import Header from "../Components/Header_components/Header"
+import Recipe from "../Components/Recipe_page_components/Recipe"
 import { useState, useEffect } from "react";
 import Cookies from 'js-cookie';
-import Recipe_page_controller from "../Components/Recipe_page_controller";
+import Recipe_page_controller from "../Components/Recipe_page_components/Recipe_page_controller";
 
 function Recipes(){
     const colorItems = [];
     const [data, setData] = useState(null);
     const [error, setError] = useState(null);
-  
     useEffect(() => {
-      fetch("https://uur_data.cleverapps.io/Main.php")
+      fetch("http://localhost/my-app/src/Model/Main.php")
         .then((response) => {
-      
-          // Zobrazíme surový text odpovědi pro debugging
+
           return response.text().then(text => {
-       
-            // Pokud je text prázdný, vyhodíme chybu
             if (!text) throw new Error('No data received');
-            // Zkusíme text naparsovat jako JSON
             try {
               return JSON.parse(text);
             } catch (e) {
@@ -26,11 +21,10 @@ function Recipes(){
           });
         })
         .then((data) => {
-          
           setData(data);
         })
         .catch((error) => {
-          console.error('Error:', error);
+          
           setError(error.message);
         });
     }, []);
@@ -44,6 +38,7 @@ function Recipes(){
       return (
         <>
         <Header page_active="Recipes"/>
+        <h1 id="Not_logged_h1">You need to be logged in!</h1>
         </>
     )
     }
@@ -51,7 +46,7 @@ function Recipes(){
       return (
         <>
         <Header page_active="Recipes"/>
-        <Recipe_page_controller data={data} />
+        <Recipe_page_controller data={data} setData={setData} />
         </>
     )
     }

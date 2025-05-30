@@ -31,7 +31,7 @@ $dbname = "uur";
         $Recipe_id = $data["Recipe_id"];
         $User_id = $data['User_id'];
 
-      
+        // dostat recepty
         $stmt = $conn->prepare("SELECT ID_PERSON FROM recepty WHERE ID = :id");
         $stmt->execute(["id" => $Recipe_id]);
         $row = $stmt->fetch(PDO::FETCH_ASSOC);

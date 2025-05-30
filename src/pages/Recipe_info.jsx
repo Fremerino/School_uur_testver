@@ -1,4 +1,4 @@
-import Header from "../Components/Header"
+import Header from "../Components/Header_components/Header"
 import "../CSS/Recipe_info.css"
 import Recipe_name from "../Components/Recipe_info_components/Recipe_name"
 import Recipe_ingredients from "../Components/Recipe_info_components/Recipe_ingredients"
@@ -14,7 +14,7 @@ function Recipe_info(){
     const [isLoading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch("https://uur_data.cleverapps.io/Get_Recipe.php", {
+        fetch("http://localhost/my-app/src/Model/Get_Recipe.php", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -22,13 +22,8 @@ function Recipe_info(){
             body: JSON.stringify({ id }),
         })
           .then((response) => {
-            console.log('Raw response:', response);
-            // Zobrazíme surový text odpovědi pro debugging
             return response.text().then(text => {
-              console.log('Raw text:', text);
-              // Pokud je text prázdný, vyhodíme chybu
               if (!text) throw new Error('No data received');
-              // Zkusíme text naparsovat jako JSON
               try {
                 return JSON.parse(text);
               } catch (e) {
@@ -38,7 +33,6 @@ function Recipe_info(){
             });
           })
           .then((data) => {
-            console.log('Parsed data:', data);
             setData(data);
             setLoading(false);
           })

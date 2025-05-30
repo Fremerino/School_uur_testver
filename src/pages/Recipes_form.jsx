@@ -1,4 +1,4 @@
-import Header from "../Components/Header"
+import Header from "../Components/Header_components/Header"
 import "../CSS/Recipe.css"
 import Recipe_name_field from "../Components/Recipe_form_components/Recipe_name_field"
 import Recipe_process_field from "../Components/Recipe_form_components/Recipe_process_field"
@@ -26,7 +26,7 @@ function DataSend() {
             User_id: Cookies.get("ID")
         };
         try {
-            const response = await fetch('https://uur_data.cleverapps.io/Remove_Recipe.php', {
+            const response = await fetch('http://localhost/my-app/src/Model/Remove_Recipe.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ function DataSend() {
         formData.append("Image", Image); 
 
         try {
-            const response = await fetch("https://uur_data.cleverapps.io/Recipe_add.php", {
+            const response = await fetch("http://localhost/my-app/src/Model/Recipe_add.php", {
                 method: "POST",
                 body: formData,
             });
@@ -62,19 +62,19 @@ function DataSend() {
             if (!response.ok) throw new Error("Chyba při odesílání dat");
 
             const result = await response.json();
-            setMessage("Succes!");
+            setMessage(result);
             setPopupOpen(true);
             console.log(result);
         } catch (error) {
-            console.error("Chyba:", error);
-            setMessage("The request could not be proccesed!");
+            setMessage("You did not choose a picture!");
+            setPopupOpen(true);
         }
     };
 
     const combinedSend = async () => {
-        
+    
         if (id) {
-            await removeData(); // počkej, až se recept opravdu odstraní
+            await removeData(); 
         }
         await sendData();
     };
@@ -86,7 +86,7 @@ function DataSend() {
 function base64ToFile(base64String, filename = 'image.png') {
 
   const arr = base64String.split(',');
-  let mime = 'image/png'; 
+  let mime = 'image/png'; // Výchozí MIME typ
   let bstr;
 
   if (arr.length > 1 && arr[0].startsWith('data:')) {
@@ -111,7 +111,6 @@ function base64ToFile(base64String, filename = 'image.png') {
     
 
     if (!id) {
-        console.log("ahoj :)")
     return (
         <>
         <Header page_active=""/>
@@ -133,7 +132,7 @@ function base64ToFile(base64String, filename = 'image.png') {
         const [data, setData] = useState([]);
     
         useEffect(() => {
-            fetch("https://uur_data.cleverapps.io/Get_Recipe.php", {
+            fetch("http://localhost/my-app/src/Model/Get_Recipe.php", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -141,10 +140,10 @@ function base64ToFile(base64String, filename = 'image.png') {
                 body: JSON.stringify({ id }),
             })
               .then((response) => {
-    
+                console.log('Raw response:', response);
                 // Zobrazíme surový text odpovědi pro debugging
                 return response.text().then(text => {
-        
+                  console.log('Raw text:', text);
                   // Pokud je text prázdný, vyhodíme chybu
                   if (!text) throw new Error('No data received');
                   // Zkusíme text naparsovat jako JSON
@@ -157,7 +156,7 @@ function base64ToFile(base64String, filename = 'image.png') {
                 });
               })
               .then((data) => {
-       
+                console.log('Parsed data:', data);
                 setData(data);
                 setRecipeName(data[1]);
                 setProcess(data[3]);

@@ -25,7 +25,7 @@ function Register_form(props) {
             
             
             try {
-                const response = await fetch('https://uur_data.cleverapps.io/Send.php', {
+                const response = await fetch('http://localhost/my-app/src/Model/Send.php', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -36,7 +36,6 @@ function Register_form(props) {
                 const result = await response.json();
                 props.Message(result[0]);
                 props.set_pop_up(true);
-                
                 
                 
             } catch (error) {
@@ -57,6 +56,7 @@ function Register_form(props) {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Name"
+                    maxLength={8}
                     required
                 />
                 <br/> 
@@ -67,6 +67,7 @@ function Register_form(props) {
                     value={formData.password}
                     onChange={handleChange}
                     placeholder="Password"
+                    maxLength={15}
                     required
                 />
             <br/> 

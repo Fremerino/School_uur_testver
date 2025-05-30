@@ -82,8 +82,8 @@ function Recipe_ingredients_row(props) {
   return (
     <>
     <div className="Recipe_item_row"> 
-        <input name="Name" onChange={IngridentHandler} required placeholder="Name" value={data["nameR"]} className="Name_input"/> 
-        <input name="Quantity" onChange={IngridentHandler} required placeholder="Quantity" value={data["quantity"]}  className="Quantity_input"/>
+        <input name="Name" onChange={IngridentHandler} required placeholder="Name" value={data["nameR"]} className="Name_input" maxLength={25}/> 
+        <input name="Quantity" onChange={IngridentHandler} required placeholder="Quantity" value={data["quantity"]}  className="Quantity_input" maxLength={6}/>
         <Dropdown_component setData1={IngredientHandler2} setData={IngridentHandler} unit={data["unit"]}/>
     </div>
     </>

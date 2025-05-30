@@ -27,7 +27,7 @@ function Login_form(props) {
             
             
             try {
-                const response = await fetch('https://uur_data.cleverapps.io/Get_user.php', {
+                const response = await fetch('http://localhost/my-app/src/Model/Get_user.php', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -72,6 +72,7 @@ function Login_form(props) {
                     value={formData_login.name_login}
                     onChange={handleChange}
                     placeholder="Name"
+                    maxLength={8}
                     required
                 />
                 <br/> 
@@ -83,6 +84,7 @@ function Login_form(props) {
                     value={formData_login.password_login}
                     onChange={handleChange}
                     placeholder="Password"
+                    maxLength={15}
                     required
                 />
                 <br/> 

@@ -13,7 +13,7 @@
     text-align: center;
 }
 .logo {
-    width: 10%;
+    width: 264px;
     position: relative;
     top: 2vh;
 }
@@ -29,7 +29,7 @@
     margin-left: 1.5vw;
     box-shadow: 1.6px 3.2px 3.2px hsl(0deg 0% 0% / 0.45);
     border: 2px solid transparent;
-    font-size: 4.1vh;
+    font-size: 2.7vw;
 }
 a:hover {
     border: 2px solid black;
@@ -103,6 +103,11 @@ a:hover {
   }
   @media only screen and (max-height: 700px) {
         #head {
-            height: 20vh;
+            height: 22vh;
+}
+  }
+  @media only screen and (max-height: 950px) {
+        #head {
+            height: 18vh;
 }
 }

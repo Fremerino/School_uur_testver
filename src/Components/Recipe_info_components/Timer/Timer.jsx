@@ -31,7 +31,6 @@ function Timer(props) {
             }
         }
     
-        // Formátování s nulami
         const formattedMinutes = minutes.toString().padStart(2, '0');
         const formattedSeconds = seconds.toString().padStart(2, '0');
         const format = `${formattedMinutes}:${formattedSeconds}`;
@@ -49,8 +48,8 @@ function Timer(props) {
     }, [Status,Time]);
 
     const handleInputChange = (e) => {
-        let raw = e.target.value.replace(/\D/g, ''); // jen číslice
-        if (raw.length > 5) raw = raw.slice(0, 5); // max 5 číslic 
+        let raw = e.target.value.replace(/\D/g, ''); 
+        if (raw.length > 5) raw = raw.slice(0, 5); 
     
         let formatted = raw;
         if (raw.length > 2) {
@@ -58,11 +57,14 @@ function Timer(props) {
           const seconds = raw.slice(-2);
           formatted = `${minutes}:${seconds}`;
         }
-        setTime(formatted);
+        if(Status==0)
+        {
+            setTime(formatted);
+        }
     }
     return (
       <>
-    <Box sx={{ flexGrow: 1,width: '100%', }}>
+    <Box sx={{ flexGrow: 1,width: '100%' }}>
         <Grid container spacing={2}>
             <Grid size={12}>
                 <input type="text" value={Time} className="Timer_input" onChange={handleInputChange} placeholder='Time'/> 
