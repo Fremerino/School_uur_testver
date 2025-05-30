@@ -43,7 +43,7 @@ $dbname = "uur";
             $stmt->execute(["id" => $Recipe_id]);
 
             $conn->commit();
-            echo json_encode(["success"]);
+            echo json_encode(["Success"]);
         } else {
             echo json_encode(["Error - not the owner"]);
         }

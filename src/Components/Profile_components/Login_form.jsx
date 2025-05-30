@@ -41,7 +41,7 @@ function Login_form(props) {
             
                 const result = await response.json();
                 
-                if(!(result == "wrong password or username" ||  result =="error"))
+                if(!(result == "Wrong password or username" ||  result =="error"))
                 {
                     props.Message("Succes!");
                     Cookies.set('ID', result[0], { expires: 7 });
