@@ -26,7 +26,7 @@ function DataSend() {
             User_id: Cookies.get("ID")
         };
         try {
-            const response = await fetch('http://localhost/my-app/src/Model/Remove_Recipe.php', {
+            const response = await fetch('https://data.cleverapps.io/Remove_Recipe.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -37,7 +37,7 @@ function DataSend() {
             if (!response.ok) throw new Error("Chyba při mazání receptu");
 
             const result = await response.json();
-            console.log("Recept byl odstraněn:", result);
+            
         } catch (error) {
             console.error("Chyba při mazání receptu:", error);
             alert("Nepodařilo se odstranit recept.");
@@ -54,7 +54,7 @@ function DataSend() {
         formData.append("Image", Image); 
 
         try {
-            const response = await fetch("http://localhost/my-app/src/Model/Recipe_add.php", {
+            const response = await fetch("https://data.cleverapps.io/Recipe_add.php", {
                 method: "POST",
                 body: formData,
             });
@@ -64,7 +64,7 @@ function DataSend() {
             const result = await response.json();
             setMessage(result);
             setPopupOpen(true);
-            console.log(result);
+            
         } catch (error) {
             setMessage("You did not choose a picture!");
             setPopupOpen(true);
@@ -86,7 +86,7 @@ function DataSend() {
 function base64ToFile(base64String, filename = 'image.png') {
 
   const arr = base64String.split(',');
-  let mime = 'image/png'; // Výchozí MIME typ
+  let mime = 'image/png'; 
   let bstr;
 
   if (arr.length > 1 && arr[0].startsWith('data:')) {
@@ -132,7 +132,7 @@ function base64ToFile(base64String, filename = 'image.png') {
         const [data, setData] = useState([]);
     
         useEffect(() => {
-            fetch("http://localhost/my-app/src/Model/Get_Recipe.php", {
+            fetch("https://data.cleverapps.io/Get_Recipe.php", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -141,12 +141,12 @@ function base64ToFile(base64String, filename = 'image.png') {
             })
               .then((response) => {
                 console.log('Raw response:', response);
-                // Zobrazíme surový text odpovědi pro debugging
+                
                 return response.text().then(text => {
-                  console.log('Raw text:', text);
-                  // Pokud je text prázdný, vyhodíme chybu
+                  
+                  
                   if (!text) throw new Error('No data received');
-                  // Zkusíme text naparsovat jako JSON
+                 
                   try {
                     return JSON.parse(text);
                   } catch (e) {
@@ -156,7 +156,7 @@ function base64ToFile(base64String, filename = 'image.png') {
                 });
               })
               .then((data) => {
-                console.log('Parsed data:', data);
+                
                 setData(data);
                 setRecipeName(data[1]);
                 setProcess(data[3]);

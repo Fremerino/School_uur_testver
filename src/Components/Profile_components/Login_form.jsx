@@ -27,7 +27,7 @@ function Login_form(props) {
             
             
             try {
-                const response = await fetch('http://localhost/my-app/src/Model/Get_user.php', {
+                const response = await fetch('https://data.cleverapps.io/Get_user.php', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

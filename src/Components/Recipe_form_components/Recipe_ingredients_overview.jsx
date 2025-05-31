@@ -61,17 +61,17 @@ else
       fontSize: "x-large",
       marginLeft: "4vw"
     };
-return (
-  <>
-  <div className="Recipe_item_row_full"> 
-  <Generic_label  text="Ingredients" style_definition={styler} class="nametag_label" />
-  <div className="Recipe_ingeridents_coat"> 
-      {rows}
-      <Recipe_ingredients_add_button adder={handleAddRow}/>
-  </div>
-  </div>
-  </>
-)
+  return (
+    <>
+    <div className="Recipe_item_row_full"> 
+    <Generic_label  text="Ingredients" style_definition={styler} class="nametag_label" />
+    <div className="Recipe_ingeridents_coat"> 
+        {rows}
+        <Recipe_ingredients_add_button adder={handleAddRow}/>
+    </div>
+    </div>
+    </>
+  )
 }
 }
 export default Recipe_ingredients_overview

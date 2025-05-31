@@ -9,7 +9,7 @@ function Recipes(){
     const [data, setData] = useState(null);
     const [error, setError] = useState(null);
     useEffect(() => {
-      fetch("http://localhost/my-app/src/Model/Main.php")
+      fetch("https://data.cleverapps.io/Main.php")
         .then((response) => {
 
           return response.text().then(text => {

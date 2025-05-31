@@ -54,6 +54,7 @@
     line-height: 0.8;
     min-height: 80px;
     margin-top: 2vh;  
+    cursor: pointer;
 }
 
 .register-form  > button {
@@ -67,6 +68,7 @@
     line-height: 0.8;
     min-height: 80px;
     margin-top: 2vh;  
+    cursor: pointer;
 }
 
 .login-form {

@@ -17,7 +17,7 @@ function Pop_up(props) {
                     ))}
                 </h2>
                 <div className="btn-group">
-                <button className="btn-yes" onClick={(e) => {props.setPopupOpen(false)}}>YES</button>
+                    <button className="btn-yes" onClick={(e) => {props.setPopupOpen(false)}}>YES</button>
                 </div>
             </div>
             </div>
